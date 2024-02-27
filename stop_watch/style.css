@@ -1,0 +1,57 @@
+body{
+    height: 100vh;
+    background-color: #b6e7cd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-image: url("https://st2.depositphotos.com/1718692/7425/i/450/depositphotos_74257459-stock-photo-lake-near-the-mountain-in.jpg");
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+h1{
+    z-index: 10;
+    color: white;
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.box{
+    background-color: black;
+    height: 250px;
+    width: 350px;
+    position: absolute;
+    opacity: 0.5;
+}
+
+.point{
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 380px){
+    .container{
+        height: 150px;
+        width: 200px;
+    }
+
+    .box{
+        height: 150px;
+        width: 200px;
+    }
+}

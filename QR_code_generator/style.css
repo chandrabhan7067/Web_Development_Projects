@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(#3b8cef, #6dc56c, #d26fc8);
+}
+
+.box{
+    width: 25%;
+    height: 47%;
+    padding: 20px;
+    text-align: center;
+}
+
+.box :first-child{
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+input{
+    padding: 9px;
+    border-radius: 3px;
+    border: 1px solid grey;
+    width: 93%;
+}
+
+#QRcodeBox{
+    margin-top: 5px;
+    height: 0px;
+    transition: 0.5s;
+}
+
+button{
+    padding: 9px;
+    text-align: center;
+    border-radius: 3px;
+    color: white;
+    background: #6f73dc;
+    cursor: pointer;
+    border: 1px solid #7e79da;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #QRimg{
+        width: 100px;
+    }
+
+    .box {
+        width: 50%;
+    }
+
+}

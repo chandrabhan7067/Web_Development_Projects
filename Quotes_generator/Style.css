@@ -1,0 +1,84 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(red, yellow);
+    width: 100%;
+    height: 100vh;
+}
+
+.quotes_box{
+    background-color: antiquewhite;
+    width: 35%;
+    height: 45vh;
+    border-radius: 5px;
+}
+
+.quotes_box h2{
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px 0px;
+}
+
+.underline {
+    text-decoration: underline;
+    text-underline-offset: 3px; /* Adjust the offset as needed */
+}
+
+#quotes{
+    text-align: center;
+    height: 70px;
+}
+
+#author{
+    text-align: right;
+    margin: 10px;
+    padding-right: 5px;
+    height: 30px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.btn{
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    padding: 10px 8px;
+    width: 100px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    height: 40px;
+}
+
+.btn1{
+    background-color: blue;
+    color: #fff;
+    margin-right: 5px;
+    transition: 0.5s;
+}
+
+.btn1:hover{
+    background-color: #fff;
+    color: blue;
+}
+
+
+.btn2{
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btn2 img{
+    width: 20px;
+}

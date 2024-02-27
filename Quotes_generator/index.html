@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes generator website</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="quotes_box">
+        <h2>Quote<span class="underline">s of t</span>he day</h2>
+        <p id="quotes">Load...</p>
+        <p id="author">Load...</p>
+
+        <div class="buttons">
+            <button class="btn btn1" onclick="newQuotes()">New quote</button>
+            <!-- <button class="btn btn2"><span><img src="../Icons/twitter.png" alt=""></span>Tweet</button> -->
+            <button class="btn btn2" onclick="tweet()">
+                <div><img src="../Icons/twitter.png" alt=""></div>
+                <div>Tweet</div>
+            </button>
+        </div>
+    </div>
+
+    
+<script>
+
+    let quotes = document.getElementById("quotes");
+    let author = document.getElementById("author");
+    const APIurl = "https://api.quotable.io/random"
+
+    function newQuotes(){
+        getQuotes(APIurl);
+
+    }
+
+    async function getQuotes(url){
+        const response = await fetch(url);
+        var data = await response.json();
+        console.log(data)
+
+        quotes.innerHTML = data.content;
+        author.innerHTML = data.author;
+    }
+
+    function tweet(){
+        window.open("https://twitter.com/intent/tweet?text=" + quotes.innerHTML, "Tweet Window", "width = 600px, height = 300px")
+    }
+
+</script>
+</body>
+
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="gallery_wrap">
+        <img class="nav-btn" id="backbtn" src="../Icons/Back.png" alt="">
+        <div class="gallery">
+            <div class="imgs">
+                <span> <img src="../Icons/facebook.png" alt=""></span>
+                <span> <img src="../Icons/instagram.png" alt=""></span>
+                <span> <img src="../Icons/twitter.png" alt=""></span>
+                <span> <img src="../Icons/youtube.png" alt=""></span>
+                <span> <img src="../Icons/whatsapp.png" alt=""></span>
+               
+            </div>
+        </div>
+        <img class="nav-btn" id="nextbtn" src="../Icons/Next.png" alt="">
+    </div>
+
+    <script>
+        let imgsContainer = document.querySelector('.imgs');
+        let backBtn = document.getElementById('backbtn');
+        let nextBtn = document.getElementById('nextbtn');
+
+        backBtn.addEventListener('click', scrollBack);
+        nextBtn.addEventListener('click', scrollNext);
+
+        function scrollBack() {
+            //imgsContainer.style.scrollBehavior = "smooth";
+            imgsContainer.scrollLeft -= 900; // Adjust the scroll distance as needed
+        }
+
+        function scrollNext() {
+            //imgsContainer.style.scrollBehavior = "smooth";
+            imgsContainer.scrollLeft += 900; // Adjust the scroll distance as needed
+        }
+
+    </script>
+    
+</body>
+</html>
